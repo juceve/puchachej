@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('direccion')->nullable();
             $table->string('telefono');
             $table->string('nrodoc')->nullable();
+            $table->date('fecnacimiento')->nullable();
             $table->string('email')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();

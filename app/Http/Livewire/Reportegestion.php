@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Cuenta;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use Livewire\Component;
 
 class Reportegestion extends Component
@@ -37,7 +38,7 @@ class Reportegestion extends Component
             INNER JOIN cuentas c ON c.id=m.cuenta_id
             GROUP BY tipo");
         }
-        return view('livewire.reportegestion', compact('gestiones'))->with('i', 1)->extends('adminlte::page');
+        return View('livewire.reportegestion', compact('gestiones'))->with('i', 1)->extends('adminlte::page');
     }
 
     protected $listeners = ['movimientos'];

@@ -42,30 +42,32 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($aportesmiembros as $item)
-                                        <tr>
-                                            <td>{{ $item->id }}</td>
-                                            <td>{{ $item->fecha }}</td>
-                                            <td>{{ $item->miembro->nombre }}</td>
-                                            <td>{{ $item->aporte->codigo }}</td>
-                                            <td>
-                                                @if ($item->status)
-                                                    <span class="badge badge-pill badge-success">Activo</span>
-                                                @else
-                                                    <span class="badge badge-pill badge-secondary">Inactivo</span>
-                                                @endif
-                                            </td>
-                                            <td align="right">
-                                                {{-- <button class="btn btn-info btn-sm" title="Ver Info">
+                                        @if ($item->movimiento->tipopago_id != 4)
+                                            <tr>
+                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $item->fecha }}</td>
+                                                <td>{{ $item->miembro->nombre }}</td>
+                                                <td>{{ $item->aporte->codigo }}</td>
+                                                <td>
+                                                    @if ($item->status)
+                                                        <span class="badge badge-pill badge-success">Activo</span>
+                                                    @else
+                                                        <span class="badge badge-pill badge-secondary">Inactivo</span>
+                                                    @endif
+                                                </td>
+                                                <td align="right">
+                                                    {{-- <button class="btn btn-info btn-sm" title="Ver Info">
                                                 <i class="fas fa-eye"></i>
                                             </button> --}}
 
-                                                <button class="btn btn-sm btn-warning" title="Reimprimir Recibo"
-                                                    wire:click='reimpresion({{ $item->id }})'>
-                                                    <i class="fas fa-print"></i> Reimprimir
-                                                </button>
+                                                    <button class="btn btn-sm btn-warning" title="Reimprimir Recibo"
+                                                        wire:click='reimpresion({{ $item->id }})'>
+                                                        <i class="fas fa-print"></i> Reimprimir
+                                                    </button>
 
-                                            </td>
-                                        </tr>
+                                                </td>
+                                            </tr>
+                                        @endif
                                     @endforeach
                                 </tbody>
                             </table>

@@ -46,6 +46,10 @@
                             {{ $miembro->nrodoc }}
                         </div>
                         <div class="form-group">
+                            <strong>Fecha de Nacimiento:</strong>
+                            {{ $miembro->fecnacimiento }}
+                        </div>
+                        <div class="form-group">
                             <strong>Email:</strong>
                             {{ $miembro->email }}
                         </div>

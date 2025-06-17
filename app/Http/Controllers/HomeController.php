@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Miembro;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $cumpleaneros = Miembro::whereMonth('fecnacimiento', Carbon::now()->month)
+            ->orderBy(DB::raw('DAY(fecnacimiento)'))
+            ->get();
+        return view('home',compact('cumpleaneros'));
     }
 }

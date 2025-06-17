@@ -41,6 +41,7 @@ class CobrosAportes extends Component
         $miembros = Miembro::where('status',1)->get();
         $tipopagos = Tipopago::all();
         $aportesmiembros = Aportemiembro::all();
+        
         $this->emit('dataTable');
         return view('livewire.cobros-aportes', compact('miembros', 'tipopagos', 'aportesmiembros'))->extends('adminlte::page');
     }
@@ -78,6 +79,7 @@ class CobrosAportes extends Component
                     'descripcion' => 'Pago aporte | Cod.:' . $aporte->codigo . ' | ' . $this->miembro->nombre,
                     'cuenta_id' => 1,
                     'user_id' => Auth::user()->id,
+                    'tipopago_id' => $this->selTipoPago,
                     'monto' => $aporte->importe
                 ]);
 

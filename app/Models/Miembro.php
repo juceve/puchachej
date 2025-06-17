@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -35,7 +36,7 @@ class Miembro extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre', 'direccion', 'telefono', 'nrodoc', 'email', 'status'];
+    protected $fillable = ['nombre', 'direccion', 'telefono', 'nrodoc', 'fecnacimiento', 'email', 'status'];
 
 
     /**
@@ -44,5 +45,17 @@ class Miembro extends Model
     public function aportemiembros()
     {
         return $this->hasMany('App\Models\Aportemiembro', 'miembro_id', 'id');
+    }
+
+    public function getEdadProximaAttribute()
+    {
+        return Carbon::parse($this->fecnacimiento)->age;
+    }
+
+    public function getFechaLiteralAttribute()
+    {
+        Carbon::setLocale('es');
+        setlocale(LC_TIME, 'es_ES.UTF-8');
+        return Carbon::parse(date('Y').substr($this->fecnacimiento,4))->translatedFormat('l d \d\e F');
     }
 }

@@ -26,6 +26,12 @@
             {!! $errors->first('nrodoc', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('Fecha Nacimiento') }}
+            {{ Form::date('fecnacimiento', $miembro->fecnacimiento, ['class' => 'form-control' . ($errors->has('fecnacimiento') ? '
+            is-invalid' : ''), 'placeholder' => 'Fecha nacimiento']) }}
+            {!! $errors->first('fecnacimiento', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('email') }}
             {{ Form::email('email', $miembro->email, ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid'
             : ''), 'placeholder' => 'Email']) }}
