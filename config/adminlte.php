@@ -323,6 +323,11 @@ return [
             'icon' => 'fas fa-fw fa-users',
         ],
         [
+            'text' => 'Galerias',
+            'route'  => 'galerias.index',
+            'icon' => 'fas fa-fw fa-images',
+        ],
+        [
             'text' => 'Movimientos',
             'route'  => 'movimientos.index',
             'icon' => 'fas fa-fw fa-file-invoice-dollar',

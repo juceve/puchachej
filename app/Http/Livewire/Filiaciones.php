@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
-class Multas extends Component
+class Filiaciones extends Component
 {
 
     public $miembro_id = '', $detalles = '', $monto = '', $estado = false, $motivoid = '', $tipopagoid = '';

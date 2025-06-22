@@ -36,4 +36,6 @@ WHERE
         $i = 0;
         return view('livewire.reportedeudores', compact('deudas', 'i'))->extends('adminlte::page');
     }
+
+    
 }

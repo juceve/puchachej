@@ -23,6 +23,8 @@
                 <h2 class="section-heading text-uppercase">Galería</h2>
                 @if ($galeria)
                     <h3 class="section-subheading text-muted">{{ $galeria->titulo }}</h3>
+                    <h3 class="section-subheading">{{ $galeria->descripcion }}</h3>
+
                 @endif
             </div>
             <div class="row">

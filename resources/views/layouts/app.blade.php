@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>@yield('title') | Fraternidad Puchachej</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/logo1.png') }}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -26,6 +26,8 @@
             overflow: hidden;
         }
     </style>
+    @yield('css')
+    @livewireStyles
 </head>
 
 <body id="page-top">
@@ -44,6 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('misdeudas') }}">Mis Deudas</a></li>
                     <li class="nav-item"><a class="nav-link" href="/#portfolio">Galeria</a></li>
                     @if (Route::has('login'))
                         <li class="nav-item">
@@ -71,6 +74,8 @@
     <!-- Core theme JS-->
     <script src="{{ asset('template/js/scripts.js') }}"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    @livewireScripts
+    @yield('js')
 </body>
 
 </html>

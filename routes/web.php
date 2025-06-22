@@ -3,6 +3,7 @@
 use App\Http\Controllers\AporteController;
 use App\Http\Controllers\AportemiembroController;
 use App\Http\Controllers\CuentaController;
+use App\Http\Controllers\DeudoresController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\GaleriaController;
 use App\Http\Controllers\MiembroController;
@@ -11,16 +12,14 @@ use App\Http\Controllers\PagoController;
 use App\Http\Controllers\PagosaportemiembroController;
 use App\Http\Controllers\TipopagoController;
 use App\Http\Livewire\CobrosAportes;
+use App\Http\Livewire\Misdeudas;
 use App\Http\Livewire\Multas;
 use App\Http\Livewire\Reportedeudores;
 use App\Http\Livewire\Reportegestion;
 use App\Http\Livewire\Reportemensual;
 use App\Models\Galeria;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +58,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('reportes/mensual', Reportemensual::class)->name('reportemensual');
     Route::get('reportes/gestion', Reportegestion::class)->name('reportegestion');
     Route::get('reportes/deudores', Reportedeudores::class)->name('reportedeudores');
+    Route::get('reportes/mis-deudas',function(){
+        return view('mis-deudas');
+    })->name('misdeudas');
+
+    Route::post('/buscar-deudas', [DeudoresController::class, 'buscar'])->middleware('throttle:10,3')->name('deudas.buscar');
 
 
     Route::post('/fotos/upload', [FotoController::class, 'upload'])->name('fotos.upload');
