@@ -1,0 +1,8 @@
+#EXTM3U
+#EXT-X-SESSION-DATA:DATA-ID="com.xui.1_5_13"
+#EXTINF:-1,DTV ᴴᴰ
+https://nxt.plus:8443/play/jsIuf9hXkJGR30kdZodvmoE7TbEywUMNXLVkdY4mzG0/m3u8
+#EXTINF:-1,RED UNO | SCZ ᴴᴰ
+https://nxt.plus:8443/play/jsIuf9hXkJGR30kdZodvmkTczP41eaLXbE-dLHylKcM/m3u8
+#EXTINF:-1,UNITEL | LP ᴴᴰ
+https://nxt.plus:8443/play/jsIuf9hXkJGR30kdZodvmgfTppsX-ULJ45J9-9goNtY/m3u8
