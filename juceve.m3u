@@ -30,6 +30,8 @@ https://www.dailymotion.com/cdn/live/video/x84eirw.m3u8?sec=te0yrB9jIiUC7CPhCyBM
 https://live2.eu-north-1a.cf.dmcdn.net/sec2(BT-xe5iVUqeNDnjwZpFwHyePw0I7Rv2EI_QSnfUFMNoh2cYm0HiJqcKY-WCzNVMFEREBjklI_qw-wlAdfMXfeyAbzuwEFzFGRxXvLsnzyUP0-Gi036P2YdqLlyPJOYG9)/cloud/3/x9nzqpo/d/live-720.m3u8
 #EXTINF:-1,BTV 2 HD | 7.2 ᴴᴰ
 https://live2.eu-north-1a.cf.dmcdn.net/sec2(Ua9YlgE1rdZjnuNZx0GCiI6vWJZk8GYy2F-wjIISQtWCdrHjiVDSNXmWdOk2zyPu6EzJfXQD85TG98eOdkG2_0vrxmOHtC-HphwF6A73MRvizj0fVR8N2Zp7JSqwJe9o)/cloud/3/x9ny70y/d/live-720.m3u8
+#EXTINF:-1,BTV 2 FHD | 7.2 ᴴᴰ
+https://live2.eu-north-1a.cf.dmcdn.net/sec2(XDYiCqPYdMK5d0sPqriyy6xCru3XdwKuMMfDYCU1VH13vZlHSrJyC53Bjm13HLcGfU4DK4O4w_QG4REScxzZJZlyfJofvLhfJnnU14H5YAnVlEYBnatBTmAsvOy6E0yZ)/cloud/3/x9ny70y/d/live-1080.m3u8
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/J0Yv7Yqn/DS1.jpg" group-title="DEPORTES HD",DIRECTV SPORTS 1 HD
 http://apphd.net:25461/play/c6yK1UeowVK1A4cIR343l-emVBCAL2_VIJpeDuZIvilUfZjZafdc7OOQ8z7bhEwU/m3u8
 
@@ -134,4 +136,5 @@ https://tls-cl.cdnz.cl/planetatv/live/chunklist_w187229446.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co/p3B7tSd/bolivia-hd-04.jpg" group-title="MUSICALES",ALEGRIA CRISTIANA HD
 https://vdochile.com:3182/stream/play.m3u8
+
 
